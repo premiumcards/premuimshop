@@ -90,7 +90,7 @@ function renderProducts(filter = "") {
 }
 
 function renderSlider() {
-  const slider = document.getElementById("slider");
+  
   slider.innerHTML = slides.map((slide, index) => `
     <article class="slide ${index === 0 ? "active" : ""}" style="--slide-bg:${slide.bg}">
       <h2>${slide.title}</h2>
