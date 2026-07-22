@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>premium.shop</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="premium.shop home">
+        <span class="brand-mark">P</span>
+        <span>premium.shop</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#gift-cards">Gift Cards</a>
+      </nav>
+      <div class="header-actions">
+        <button class="text-button" id="loginBtn" type="button">Login</button>
+        <button class="text-button" id="signupBtn" type="button">Sign Up</button>
+        <button class="cart-button" id="cartBtn" type="button" aria-label="Open cart">
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="search-band" aria-label="Search products">
+        <label class="search-wrap">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Search gift cards">
+        </label>
+      </section>
+
+      <section class="hero" aria-label="premium.shop promotions">
+        <div class="hero-copy">
+          <p class="eyebrow">Digital gift cards and vouchers</p>
+          <h1>premium.shop</h1>
+          <p>Fast checkout, QR payment, and quick UTR confirmation for every order.</p>
+        </div>
+        <div class="slider" id="slider" aria-label="Featured offers"></div>
+      </section>
+
+      <section class="catalog" id="gift-cards">
+        <div class="section-heading">
+          <h2>Premium Gift Cards</h2>
+          <p id="welcomeText">Login to save your orders and UTR details.</p>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h3>premium.shop</h3>
+        <p>Best trusted online marketplace to buy genuine digital gift cards, vouchers and codes worldwide.</p>
+      </div>
+      <div class="trust-row" aria-label="Trust badges">
+        <span>Fast Delivery</span>
+        <span>Secure Checkout</span>
+        <span>Verified Seller</span>
+        <span>Safe Payments</span>
+      </div>
+      <button class="admin-link" id="adminBtn" type="button">Admin Panel</button>
+      <p class="copyright">© 2020-2026 premium.shop. All rights reserved.</p>
+    </footer>
+
+    <dialog class="modal" id="authModal">
+      <form class="modal-card" id="authForm" method="dialog">
+        <button class="close" type="button" data-close aria-label="Close">×</button>
+        <h2 id="authTitle">Login</h2>
+        <div class="form-grid" id="namePhoneFields">
+          <label>Name<input id="authName" autocomplete="name"></label>
+          <label>Phone<input id="authPhone" autocomplete="tel"></label>
+        </div>
+        <label>Email<input id="authEmail" type="email" autocomplete="email" required></label>
+        <label>Password<input id="authPassword" type="password" autocomplete="current-password" required></label>
+        <button class="primary-btn" type="submit" id="authSubmit">Login</button>
+        <p class="form-note" id="authMessage"></p>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="cartModal">
+      <div class="modal-card wide">
+        <button class="close" type="button" data-close aria-label="Close">×</button>
+        <h2>Your Cart</h2>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">Rs 0</strong>
+        </div>
+        <button class="primary-btn" type="button" id="checkoutBtn">Pay With QR</button>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="checkoutModal">
+      <form class="modal-card payment-card" id="paymentForm" method="dialog">
+        <button class="close" type="button" data-close aria-label="Close">×</button>
+        <h2>Complete Payment</h2>
+        <img class="qr" src="assets/payment-qr.png" alt="Payment QR code">
+        <p class="payment-total" id="paymentTotal">Pay Rs 0</p>
+        <label>Enter UTR / Transaction ID<input id="utrInput" required placeholder="Example: 123456789012"></label>
+        <button class="primary-btn" type="submit">Submit Order</button>
+        <p class="form-note" id="paymentMessage"></p>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="adminModal">
+      <div class="modal-card admin-card">
+        <button class="close" type="button" data-close aria-label="Close">×</button>
+        <h2>Admin Panel</h2>
+        <form class="admin-login" id="adminForm" method="dialog">
+          <label>Admin Password<input id="adminPassword" type="password" required></label>
+          <button class="primary-btn" type="submit">Open Admin</button>
+          <p class="form-note">Password: premium2026</p>
+        </form>
+        <div class="admin-data" id="adminData" hidden>
+          <div class="admin-summary" id="adminSummary"></div>
+          <h3>Customers</h3>
+          <div class="table-wrap" id="customerTable"></div>
+          <h3>Orders and UTR</h3>
+          <div class="table-wrap" id="orderTable"></div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
