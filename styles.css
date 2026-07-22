@@ -126,9 +126,10 @@ button {
   background: var(--gold);
 }
 
-.search-band {
-  padding: 18px clamp(16px, 4vw, 52px);
-  background: #232323;
+.search-band{
+    padding:18px clamp(16px,4vw,52px);
+    background:#232323;
+    margin-bottom:30px;
 }
 
 .search-wrap {
@@ -155,10 +156,11 @@ button {
   display: grid;
   grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
   gap: clamp(18px, 4vw, 44px);
-  align-items: stretch;
-  padding: clamp(24px, 5vw, 58px) clamp(16px, 4vw, 52px);
+  align-items: center;
+  padding: 60px clamp(16px, 4vw, 52px);
+  margin-top: 30px;   /* यह लाइन जोड़ें */
   background:
-    linear-gradient(135deg, rgba(246, 179, 39, 0.18), rgba(255, 255, 255, 0.78)),
+    linear-gradient(135deg, rgba(246,179,39,.18), rgba(255,255,255,.78)),
     #fff9ed;
 }
 
