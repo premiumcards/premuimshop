@@ -153,22 +153,19 @@ button {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
-  gap: clamp(18px, 4vw, 44px);
+  display: flex;
   align-items: center;
+  justify-content: center;
   padding: 60px clamp(16px, 4vw, 52px);
-  margin-top: 30px;   /* यह लाइन जोड़ें */
   background:
-    linear-gradient(135deg, rgba(246,179,39,.18), rgba(255,255,255,.78)),
+    linear-gradient(135deg, rgba(246, 179, 39, 0.18), rgba(255, 255, 255, 0.78)),
     #fff9ed;
 }
 
 .hero-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 300px;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .eyebrow {
