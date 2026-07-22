@@ -188,8 +188,8 @@ p {
 
 h1 {
   margin: 0;
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.92;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
 }
 
 .hero-copy p:last-child {
@@ -199,12 +199,8 @@ h1 {
   line-height: 1.55;
 }
 
-.slider {
-  position: relative;
-  overflow: hidden;
-  min-height: 300px;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+.slider{
+    margin-top:25px;
 }
 
 .slide {
