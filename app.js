@@ -378,10 +378,9 @@ document.getElementById("adminForm").addEventListener("submit", async (event) =>
   const password = document.getElementById("adminPassword").value;
   try {
     const data = await loadAdmin(password);
-    renderAdmin(data);
-    document.getElementById("adminData").hidden = false;
-  } catch (error) {
-    alert(error.message);
+document.getElementById("adminForm").hidden = true;
+document.getElementById("adminData").hidden = false;
+renderAdmin(data);
   }
 });
 
