@@ -84,23 +84,6 @@ function renderProducts(filter = "") {
   `).join("") || `<p class="empty">No products found.</p>`;
 }
 
-function renderSlider() {
-  
-  slider.innerHTML = slides.map((slide, index) => `
-    <article class="slide ${index === 0 ? "active" : ""}" style="--slide-bg:${slide.bg}">
-      <h2>${slide.title}</h2>
-      <p>${slide.text}</p>
-    </article>
-  `).join("");
-
-  let current = 0;
-  setInterval(() => {
-    const allSlides = [...slider.querySelectorAll(".slide")];
-    allSlides[current].classList.remove("active");
-    current = (current + 1) % allSlides.length;
-    allSlides[current].classList.add("active");
-  }, 3200);
-}
 
 function renderHeader() {
   document.getElementById("loginBtn").textContent = state.user ? "Logout" : "Login";
