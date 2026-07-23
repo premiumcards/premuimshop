@@ -25,11 +25,6 @@ const products = [
   { id: "amazon-9999", name: "AMAZON", balance: "BALANCE 9999 INR", price: 1999, status: "available", colors: "linear-gradient(135deg,#131921,#ff9900)" }
 ];
 
-const slides = [
-  { title: "Premium gift cards at sharp prices", text: "Buy high-value vouchers with a simple checkout and instant order record.", bg: "radial-gradient(circle at 20% 20%,#f6b327,transparent 25%),linear-gradient(135deg,#232323,#8a5200)" },
-  { title: "Pay by QR and submit UTR", text: "Scan the payment code, paste the transaction ID, and your order is saved.", bg: "radial-gradient(circle at 78% 28%,#ffffff,transparent 18%),linear-gradient(135deg,#0f4c81,#141414)" },
-  { title: "Admin panel ready", text: "View every signup, customer detail, cart total, and payment UTR in one place.", bg: "radial-gradient(circle at 72% 30%,#f6b327,transparent 20%),linear-gradient(135deg,#1b3b2f,#161616)" }
-];
 
 const state = {
   cart: JSON.parse(localStorage.getItem("premiumCart") || "[]"),
@@ -390,7 +385,7 @@ document.getElementById("adminForm").addEventListener("submit", async (event) =>
   }
 });
 
-renderSlider();
+
 renderProducts();
 renderCart();
 renderHeader();
