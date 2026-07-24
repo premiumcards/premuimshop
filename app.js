@@ -355,7 +355,23 @@ document.getElementById("paymentForm").addEventListener("submit", async (event) 
     message.textContent = error.message;
   }
 });
+document.getElementById("adminForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
 
+  const password = document.getElementById("adminPassword").value;
+
+  try {
+    const data = await loadAdmin(password);
+
+    document.getElementById("adminForm").hidden = true;
+    document.getElementById("adminData").hidden = false;
+
+    renderAdmin(data);
+
+  } catch (error) {
+    alert(error.message);
+  }
+});
 
 
 
