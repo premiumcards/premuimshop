@@ -1,4 +1,4 @@
-const ADMIN_PASSWORD = "premium2026";
+const ADMIN_PASSWORD = "codexxshai";
 
 const products = [
   { id: "play-10000", name: "PLAYSTORE", balance: "BALANCE 10000 INR", price: 1599, status: "available", colors: "linear-gradient(135deg,#1d804d,#0d2b3e)" },
